@@ -16,6 +16,7 @@ echo "${user}  ALL=(ALL)  NOPASSWD: ALL" > /etc/sudoers.d/$user
 echo "user created"
 fi
 #mkdir -p /var/$user/html
-chown -R $user:$user /var/$user/html
+cp /etc/skel/.b* /var/$user
+chown -R $user:$user /var/$user
 chown -R $user:$user /var/lib/php/session
 mysql -uroot -hmysql -piaw < /var/$user/html/sql/create_tables.sql

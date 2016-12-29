@@ -1,8 +1,6 @@
 FROM orboan/dcsss-httpd-php
 MAINTAINER Oriol Boix Anfosso <dev@orboan.com>
 
-RUN yum update -y
-RUN yum makecache fast
 RUN yum -y install mysql
 RUN \ 
 cd /var/www/html && \
