@@ -20,5 +20,5 @@ ENV MYSQL_HOST=mysql
 ENV MYSQL_DATABASE=myadm
 ENV MYSQL_USER=myadm_user
 ENV MYSQL_PASSWORD=iaw
-
+ 
 ADD container-files /
