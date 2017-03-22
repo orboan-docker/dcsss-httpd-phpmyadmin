@@ -22,7 +22,9 @@ mkdir -p /var/$user/html
 cp /etc/skel/.b* /var/$user
 chown -R $user:$user /var/$user
 chown -R $user:$user /var/lib/php/session
-mysql -uroot -hmysql -p${pwd} < /var/$user/html/sql/create_tables.sql
+sleep 5
+#mysql -uroot -hmysql -p${pwd} < /var/$user/html/sql/create_tables.sql
+#mysql -hmysql -pmariadb < /var/www/html/sql/create_tables.sql
 
 #Creating another user if $USER is not www
 user=$USER
@@ -43,3 +45,6 @@ fi
 mkdir -p /home/$user
 cp /etc/skel/.b* /home/$user
 chown -R $user:$user /home/$user
+
+chmod 700 /etc/ssl/private
+
