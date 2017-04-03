@@ -1,5 +1,14 @@
 #!/bin/bash
 
+if [ -z "${MYSQL_HOST}" ]
+then
+echo "mysql host is default (mysql)"
+else
+sed -ri "s/mysql/${MYSQL_HOST}/g" /var/www/html/config.inc.php
+fi
+
+
+
 if [ -z "${MYSQL_USER}" ]
 then
 echo "PMA user is default (pmauser)"
