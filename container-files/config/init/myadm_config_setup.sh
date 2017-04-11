@@ -33,4 +33,8 @@ sed -ri "s/\['password'\]\ =\ 'iaw'/\['password'\]\ =\ '${MYSQL_ROOT_PASSWORD}'/
 sed -ri "s/\['ProxyPass'\]\ =\ 'iaw'/\['ProxyPass'\]\ =\ '${MYSQL_ROOT_PASSWORD}'/g" /var/www/html/config.inc.php
 fi
 
+if [ -f "/etc/php.ini" ]; then
+sed -i '/session.save_path\ =\ "\/tmp"/d' /etc/php.ini
+sed -ri 's/\[Session\]/\[Session\]\nsession.save_path\ =\ "\/tmp"/g' /etc/php.ini
+fi
 
