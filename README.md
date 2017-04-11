@@ -1,7 +1,7 @@
-# Added php 5.6.x and phpMyAdmin 4.6.5.2 to:
+# Added php 5.6.x and phpMyAdmin 4.7.0 to:
 # CentOS-7 with supervisord launcher, SSH server, shellinabox and httpd server | Docker
 
-This is a CentOS-7 Docker with supervisor, SSH server, shellinabox, httpd server, php 5.6.x and phpMyAdmin 4.6.5.2 web app.
+This is a CentOS-7 Docker with supervisor, SSH server, shellinabox, httpd server, php 5.6.x and phpMyAdmin 4.7.0 web app.
 
 It is intended to be run in conjuction with [https://github.com/orboan/dcsss-mariadb]
 

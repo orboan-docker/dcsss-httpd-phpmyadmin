@@ -5,9 +5,9 @@ RUN yum install -y mod_ssl
 RUN yum -y install mysql
 RUN \ 
 cd /var/www/html && \
-wget https://files.phpmyadmin.net/phpMyAdmin/4.6.6/phpMyAdmin-4.6.6-all-languages.zip && \
-unzip phpMyAdmin-4.6.6-all-languages.zip && \
-mv phpMyAdmin-4.6.6-all-languages/* ./ && \
+wget https://files.phpmyadmin.net/phpMyAdmin/4.7.0/phpMyAdmin-4.7.0-all-languages.zip && \
+unzip phpMyAdmin-4.7.0-all-languages.zip && \
+mv phpMyAdmin-4.7.0-all-languages/* ./ && \
 rm -rf /var/www/html/phpMyAdmin-4.6.6-all-languages 
 RUN chown -R apache:apache /var/www/html && \
 chmod -R 755 /var/www/html
